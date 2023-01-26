@@ -243,10 +243,14 @@ task("deploy:avax", "Deploys Avalanche contracts").setAction(async function (
   // for (let i = 0; i < contractsToVerify.length; i++) {
   //   const contract = contractsToVerify[i];
   //   console.log(`Verifying ${contract.name}: ${contract.address}`);
-  //   await hre.run("verify:verify", { 
-  //     address: contract.address,
-  //     constructorArguments: contract.args,
-  //   });
+  //   try {
+  //     await hre.run("verify:verify", { 
+  //       address: contract.address,
+  //       constructorArguments: contract.args,
+  //     });
+  //   } catch (e) {
+  //     console.log("Error verifying", e);
+  //   }
   // }
 
   // Initialize
