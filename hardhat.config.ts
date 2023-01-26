@@ -33,6 +33,7 @@ const config: HardhatUserConfig = {
     },
     avaxFujiTestnet: {
       url: "https://api.avax-test.network/ext/bc/C/rpc",
+      accounts: [process.env.PRIVATE_KEY!],
     },
     avaxMainnet: {
       url: "https://api.avax.network/ext/bc/C/rpc",
@@ -83,6 +84,8 @@ const config: HardhatUserConfig = {
   },
   etherscan: {
     apiKey: {
+      avalancheFujiTestnet: process.env.AVAX_SCAN_API_KEY!,
+      avalancheMainnet: process.env.AVAX_SCAN_API_KEY!,
       opera: process.env.FTM_SCAN_API_KEY!,
       ftmTestnet: process.env.FTM_SCAN_API_KEY!,
       optimisticEthereum: process.env.OP_SCAN_API_KEY!,
